@@ -24,20 +24,20 @@ export default function Header() {
         <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled ? 'glass py-4 shadow-lg shadow-black/20' : 'bg-transparent py-6'}`}>
             <div className="container mx-auto px-6 flex items-center justify-between">
                 <a href="#home" className="text-2xl font-bold tracking-tighter text-white">
-                    Bana<span className="text-[var(--color-electric-violet)]">.B</span>
+                    Bana<span className="text-electric-violet">.B</span>
                 </a>
 
                 {/* Desktop Nav */}
                 <nav className="hidden md:flex gap-8">
                     {navLinks.map((link) => (
-                        <a key={link.name} href={link.href} className="text-sm font-medium text-slate-300 hover:text-[var(--color-neon-cyan)] transition-colors">
+                        <a key={link.name} href={link.href} className="text-sm font-medium text-slate-300 hover:text-neon-cyan transition-colors">
                             {link.name}
                         </a>
                     ))}
                 </nav>
 
                 <div className="hidden md:block">
-                    <a href="#contact" className="px-6 py-2.5 rounded-full bg-gradient-to-r from-[var(--color-electric-violet)] to-[var(--color-neon-cyan)] text-white text-sm font-medium hover:opacity-90 transition-opacity">
+                    <a href="#contact" className="px-6 py-2.5 rounded-full bg-linear-to-r from-electric-violet to-neon-cyan text-white text-sm font-medium hover:opacity-90 transition-opacity">
                         Hire Me
                     </a>
                 </div>
@@ -74,7 +74,7 @@ export default function Header() {
                         ))}
                         <a 
                             href="#contact" 
-                            className="mt-4 px-6 py-3 rounded-lg text-center bg-gradient-to-r from-[var(--color-electric-violet)] to-[var(--color-neon-cyan)] text-white font-medium"
+                            className="mt-4 px-6 py-3 rounded-lg text-center bg-linear-to-r from-electric-violet to-neon-cyan text-white font-medium"
                             onClick={() => setMobileMenuOpen(false)}
                         >
                             Hire Me

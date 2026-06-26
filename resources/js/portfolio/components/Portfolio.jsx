@@ -27,7 +27,7 @@ export default function Portfolio() {
                             onClick={() => setFilter(cat)}
                             className={`px-6 py-2 rounded-full text-sm font-medium transition-all ${
                                 filter === cat 
-                                ? 'bg-gradient-to-r from-[var(--color-electric-violet)] to-[var(--color-neon-cyan)] text-white shadow-lg shadow-[var(--color-electric-violet)]/20' 
+                                ? 'bg-linear-to-r from-electric-violet to-neon-cyan text-white shadow-lg shadow-(--color-electric-violet)/20' 
                                 : 'glass text-slate-300 hover:text-white hover:bg-white/10'
                             }`}
                         >
@@ -48,14 +48,14 @@ export default function Portfolio() {
                                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                                 />
                             </div>
-                            <div className="p-6 flex flex-col flex-grow">
-                                <div className="text-[var(--color-neon-cyan)] text-xs font-bold uppercase tracking-wider mb-2">
+                            <div className="p-6 flex flex-col grow">
+                                <div className="text-neon-cyan text-xs font-bold uppercase tracking-wider mb-2">
                                     {project.category}
                                 </div>
-                                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-[var(--color-electric-violet)] transition-colors">
+                                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-electric-violet transition-colors">
                                     {project.title}
                                 </h3>
-                                <p className="text-slate-400 text-sm mb-6 flex-grow">
+                                <p className="text-slate-400 text-sm mb-6 grow">
                                     {project.description}
                                 </p>
                                 <div className="flex flex-wrap gap-2 mt-auto">

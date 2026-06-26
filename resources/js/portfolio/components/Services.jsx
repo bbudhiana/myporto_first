@@ -13,7 +13,7 @@ export default function Services() {
                 
                 <div className="grid lg:grid-cols-3 gap-8">
                     {services.map(service => (
-                        <div key={service.id} className="glass rounded-2xl p-8 flex flex-col group hover:border-[var(--color-electric-violet)]/50 transition-colors relative overflow-hidden">
+                        <div key={service.id} className="glass rounded-2xl p-8 flex flex-col group hover:border-electric-violet/50 transition-colors relative overflow-hidden">
                             <div className="absolute top-0 right-0 p-8 opacity-5 group-hover:opacity-10 transition-opacity transform group-hover:scale-110 group-hover:-rotate-12 duration-500">
                                 {/* Abstract Icon shape */}
                                 <svg width="120" height="120" viewBox="0 0 24 24" fill="currentColor" className="text-white">
@@ -23,17 +23,17 @@ export default function Services() {
                                 </svg>
                             </div>
                             
-                            <h3 className="text-2xl font-bold text-white mb-4 relative z-10 group-hover:text-[var(--color-neon-cyan)] transition-colors">
+                            <h3 className="text-2xl font-bold text-white mb-4 relative z-10 group-hover:text-neon-cyan transition-colors">
                                 {service.title}
                             </h3>
-                            <p className="text-slate-400 mb-8 relative z-10 leading-relaxed flex-grow">
+                            <p className="text-slate-400 mb-8 relative z-10 leading-relaxed grow">
                                 {service.description}
                             </p>
                             
                             <ul className="space-y-3 relative z-10 mb-8">
                                 {service.features.map(feature => (
                                     <li key={feature} className="flex items-center text-sm text-slate-300">
-                                        <svg className="w-5 h-5 mr-3 text-[var(--color-emerald-400)] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <svg className="w-5 h-5 mr-3 text-emerald-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                                         </svg>
                                         {feature}

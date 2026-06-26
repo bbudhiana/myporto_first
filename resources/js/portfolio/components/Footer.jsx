@@ -9,12 +9,12 @@ export default function Footer() {
 
     return (
         <footer className="border-t border-white/10 bg-slate-950 py-12 relative overflow-hidden">
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-1/2 h-px bg-gradient-to-r from-transparent via-[var(--color-electric-violet)] to-transparent opacity-50"></div>
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-1/2 h-px bg-linear-to-r from-transparent via-electric-violet to-transparent opacity-50"></div>
             
             <div className="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
                 <div className="flex flex-col items-center md:items-start gap-2">
                     <a href="#home" className="text-2xl font-bold tracking-tighter text-white">
-                        Bana<span className="text-[var(--color-electric-violet)]">.B</span>
+                        Bana<span className="text-electric-violet">.B</span>
                     </a>
                     <p className="text-sm text-slate-500">
                         © {currentYear} Bana Budhiana. All rights reserved.

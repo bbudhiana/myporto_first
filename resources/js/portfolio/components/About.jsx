@@ -21,7 +21,7 @@ export default function About() {
                             />
                         </div>
                         {/* Stats Overlay */}
-                        <div className="absolute -bottom-6 -right-6 glass p-6 rounded-xl border-t-4 border-t-[var(--color-electric-violet)]">
+                        <div className="absolute -bottom-6 -right-6 glass p-6 rounded-xl border-t-4 border-t-electric-violet">
                             <div className="text-4xl font-bold text-white mb-1">{profile.yearsOfExperience}</div>
                             <div className="text-sm text-slate-400 font-medium">Years Experience</div>
                         </div>
