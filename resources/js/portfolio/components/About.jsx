@@ -4,7 +4,7 @@ import { profile } from '../data/portfolioData';
 
 export default function About() {
     return (
-        <section id="about" className="py-24 relative">
+        <section id="about" className="relative">
             <div className="container mx-auto px-6">
                 <SectionHeader 
                     title="About Me" 

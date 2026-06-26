@@ -4,7 +4,7 @@ import { services } from '../data/portfolioData';
 
 export default function Services() {
     return (
-        <section id="services" className="py-24 relative bg-slate-900/50">
+        <section id="services" className="relative bg-slate-900/50">
             <div className="container mx-auto px-6">
                 <SectionHeader 
                     title="Services" 

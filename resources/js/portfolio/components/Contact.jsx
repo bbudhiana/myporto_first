@@ -20,7 +20,7 @@ export default function Contact() {
     };
 
     return (
-        <section id="contact" className="py-24 relative">
+        <section id="contact" className="relative">
             <div className="container mx-auto px-6">
                 <SectionHeader 
                     title="Let's Talk" 

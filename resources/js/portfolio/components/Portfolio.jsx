@@ -12,7 +12,7 @@ export default function Portfolio() {
         : projects.filter(p => p.category === filter);
 
     return (
-        <section id="portfolio" className="py-24 relative">
+        <section id="portfolio" className="relative">
             <div className="container mx-auto px-6">
                 <SectionHeader 
                     title="Selected Works" 

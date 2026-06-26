@@ -4,7 +4,7 @@ import { skills } from '../data/portfolioData';
 
 export default function Skills() {
     return (
-        <section id="skills" className="py-24 relative bg-slate-900/50">
+        <section id="skills" className="relative bg-slate-900/50">
             <div className="container mx-auto px-6">
                 <SectionHeader 
                     title="Tech Stack & Expertise" 
