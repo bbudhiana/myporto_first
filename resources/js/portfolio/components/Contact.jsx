@@ -1,22 +1,38 @@
 import React, { useState } from 'react';
 import SectionHeader from './SectionHeader';
-import { profile } from '../data/portfolioData';
 
 export default function Contact() {
     const [formData, setFormData] = useState({ name: '', email: '', subject: '', message: '' });
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [submitted, setSubmitted] = useState(false);
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         setIsSubmitting(true);
-        // Simulate API call
-        setTimeout(() => {
+        try {
+            const csrfToken = document.querySelector('meta[name="csrf-token"]')?.content || '';
+            const response = await fetch('/contact', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-CSRF-TOKEN': csrfToken,
+                    'Accept': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            });
+            const data = await response.json();
+            if (response.ok && data.success) {
+                setSubmitted(true);
+                setFormData({ name: '', email: '', subject: '', message: '' });
+                setTimeout(() => setSubmitted(false), 5000);
+            } else {
+                alert(data.message || 'Failed to send message. Please try again.');
+            }
+        } catch {
+            alert('Failed to send message. Please check your connection and try again.');
+        } finally {
             setIsSubmitting(false);
-            setSubmitted(true);
-            setFormData({ name: '', email: '', subject: '', message: '' });
-            setTimeout(() => setSubmitted(false), 5000);
-        }, 1500);
+        }
     };
 
     return (
@@ -38,9 +54,7 @@ export default function Contact() {
                             </div>
                             <div>
                                 <h4 className="text-lg font-bold text-white mb-1">Email</h4>
-                                <a href={`mailto:${profile.email}`} className="text-slate-400 hover:text-neon-cyan transition-colors">
-                                    {profile.email}
-                                </a>
+                                <p className="text-slate-400">Use the form to reach me directly.</p>
                             </div>
                         </div>
 

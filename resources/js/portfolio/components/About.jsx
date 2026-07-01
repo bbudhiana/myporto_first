@@ -1,5 +1,6 @@
 import React from 'react';
 import SectionHeader from './SectionHeader';
+import ImageWithFallback from './ImageWithFallback';
 import { profile } from '../data/portfolioData';
 
 export default function About() {
@@ -14,10 +15,11 @@ export default function About() {
                 <div className="grid lg:grid-cols-12 gap-12 items-start">
                     <div className="lg:col-span-5 relative">
                         <div className="aspect-square rounded-2xl overflow-hidden glass p-2">
-                            <img 
-                                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=800&h=800" 
+                            <ImageWithFallback 
+                                src="/images/about.jpg"
                                 alt={profile.name}
                                 className="w-full h-full object-cover rounded-xl grayscale hover:grayscale-0 transition-all duration-500"
+                                loading="lazy"
                             />
                         </div>
                         {/* Stats Overlay */}

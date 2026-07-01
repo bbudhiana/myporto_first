@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import SectionHeader from './SectionHeader';
+import ImageWithFallback from './ImageWithFallback';
 import { projects } from '../data/portfolioData';
 
 export default function Portfolio() {
@@ -42,10 +43,11 @@ export default function Portfolio() {
                         <div key={project.id} className="group glass rounded-2xl overflow-hidden flex flex-col hover:-translate-y-2 transition-transform duration-300">
                             <div className="aspect-video overflow-hidden relative">
                                 <div className="absolute inset-0 bg-slate-900/20 group-hover:bg-transparent transition-colors z-10"></div>
-                                <img 
+                                <ImageWithFallback 
                                     src={project.image} 
                                     alt={project.title}
                                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                    loading="lazy"
                                 />
                             </div>
                             <div className="p-6 flex flex-col grow">

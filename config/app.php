@@ -123,4 +123,15 @@ return [
         'store' => env('APP_MAINTENANCE_STORE', 'database'),
     ],
 
+    /*
+    |--------------------------------------------------------------------------
+    | Contact Email Address
+    |--------------------------------------------------------------------------
+    |
+    | Email address where portfolio contact form messages are sent.
+    |
+    */
+
+    'contact_email' => env('CONTACT_EMAIL', 'bana.budhiana@gmail.com'),
+
 ];

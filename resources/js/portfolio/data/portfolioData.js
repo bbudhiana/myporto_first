@@ -1,6 +1,5 @@
 export const profile = {
     name: "Bana Budhiana",
-    email: "bana.budhiana@gmail.com",
     yearsOfExperience: "20+",
     title: "Senior Full-Stack Developer & Server Administrator"
 };
@@ -25,7 +24,7 @@ export const projects = [
         category: "Full-Stack",
         description: "High-performance e-commerce engine built for scale.",
         technologies: ["Laravel", "ReactJS", "TailwindCSS", "MariaDB"],
-        image: "https://images.unsplash.com/photo-1557821552-17105176677c?auto=format&fit=crop&q=80&w=600&h=400"
+        image: "/images/project-ecommerce.jpg"
     },
     {
         id: 2,
@@ -33,7 +32,7 @@ export const projects = [
         category: "DevOps/Linux",
         description: "Hardened Linux server clustering with optimized database routing.",
         technologies: ["Linux", "MySQL", "Bash"],
-        image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&q=80&w=600&h=400"
+        image: "/images/project-devops.jpg"
     },
     {
         id: 3,
@@ -41,7 +40,7 @@ export const projects = [
         category: "Frontend",
         description: "Real-time interactive dashboard for enterprise financial analytics.",
         technologies: ["ReactJS", "TypeScript", "TailwindCSS"],
-        image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=600&h=400"
+        image: "/images/project-dashboard.jpg"
     }
 ];
 
